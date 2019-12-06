@@ -7,6 +7,7 @@ import android.os.SystemClock;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.d("TAG", "onCreat()");
 
         listViewMP3=findViewById(R.id.listViewMP3);
         btnPlay=findViewById(R.id.btnPlay);
@@ -91,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+
         switch (view.getId()){
             case R.id.btnPlay :
                 mediaPlayer=new MediaPlayer();
